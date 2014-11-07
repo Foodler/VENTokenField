@@ -206,6 +206,8 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     } else {
         [self focusInputTextField];
     }
+    
+    [self invalidateIntrinsicContentSize];
 }
 
 - (void)setPlaceholderText:(NSString *)placeholderText
