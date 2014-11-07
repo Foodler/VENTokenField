@@ -10,42 +10,12 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>0CD24887D17F41CB9A2D8AF8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-VENTokenFieldSampleTests.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-VENTokenFieldSampleTests.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>0EDC359051B446EA93FED072</key>
 		<dict>
 			<key>fileRef</key>
 			<string>C4D07417DD394445AE7C0DB7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>2803779BB60049739FFA6935</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-VENTokenField.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-VENTokenField.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2A1A551C476247859B5B77C8</key>
 		<dict>
@@ -60,7 +30,7 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>50CB7BF075094249AF9DF3BD</key>
+		<key>3A5EEDD25600E60572321D08</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -69,9 +39,24 @@
 			<key>lastKnownFileType</key>
 			<string>text.xcconfig</string>
 			<key>name</key>
-			<string>Pods-VENTokenFieldSample.xcconfig</string>
+			<string>Pods-VENTokenFieldSample.debug.xcconfig</string>
 			<key>path</key>
-			<string>Pods/Pods-VENTokenFieldSample.xcconfig</string>
+			<string>Pods/Target Support Files/Pods-VENTokenFieldSample/Pods-VENTokenFieldSample.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6F15E7AA9A7537BFA0B4A303</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-VENTokenFieldSampleTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-VENTokenFieldSampleTests/Pods-VENTokenFieldSampleTests.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -94,7 +79,7 @@
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-VENTokenFieldSampleTests-resources.sh"
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-VENTokenFieldSampleTests/Pods-VENTokenFieldSampleTests-resources.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
@@ -161,7 +146,7 @@ fi
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-VENTokenFieldSample-resources.sh"
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-VENTokenFieldSample/Pods-VENTokenFieldSample-resources.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
@@ -173,6 +158,36 @@ fi
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>A5629C0FD974389DC84CCA04</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-VENTokenFieldSample.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-VENTokenFieldSample/Pods-VENTokenFieldSample.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B15768D44501C8E0B6740F21</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-VENTokenFieldSampleTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-VENTokenFieldSampleTests/Pods-VENTokenFieldSampleTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B6173DF31952760200E293BB</key>
 		<dict>
 			<key>children</key>
@@ -182,9 +197,7 @@ fi
 				<string>B692A4921954D9CA00344E36</string>
 				<string>B6173DFE1952760200E293BB</string>
 				<string>B6173DFD1952760200E293BB</string>
-				<string>2803779BB60049739FFA6935</string>
-				<string>50CB7BF075094249AF9DF3BD</string>
-				<string>0CD24887D17F41CB9A2D8AF8</string>
+				<string>D7764154083EB428E7ABA773</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1109,7 +1122,7 @@ fi
 		<key>B692A49B1954D9CA00344E36</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>50CB7BF075094249AF9DF3BD</string>
+			<string>3A5EEDD25600E60572321D08</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -1147,7 +1160,7 @@ fi
 		<key>B692A49C1954D9CA00344E36</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>50CB7BF075094249AF9DF3BD</string>
+			<string>A5629C0FD974389DC84CCA04</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -1194,7 +1207,7 @@ fi
 		<key>B692A49E1954D9CA00344E36</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>0CD24887D17F41CB9A2D8AF8</string>
+			<string>6F15E7AA9A7537BFA0B4A303</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -1231,7 +1244,7 @@ fi
 		<key>B692A49F1954D9CA00344E36</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>0CD24887D17F41CB9A2D8AF8</string>
+			<string>B15768D44501C8E0B6740F21</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -1302,6 +1315,22 @@ fi
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>D7764154083EB428E7ABA773</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3A5EEDD25600E60572321D08</string>
+				<string>A5629C0FD974389DC84CCA04</string>
+				<string>6F15E7AA9A7537BFA0B4A303</string>
+				<string>B15768D44501C8E0B6740F21</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
