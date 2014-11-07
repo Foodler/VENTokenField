@@ -141,6 +141,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 - (void)setUpInit
 {
     // Set up default values.
+    _textAutocorrectionType = UITextAutocorrectionTypeNo;
     self.maxHeight = VENTokenFieldDefaultMaxHeight;
     self.verticalInset = VENTokenFieldDefaultVerticalInset;
     self.horizontalInset = VENTokenFieldDefaultHorizontalInset;
@@ -410,7 +411,7 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
         _inputTextField.textColor = self.inputTextFieldTextColor;
         _inputTextField.font = [UIFont fontWithName:@"HelveticaNeue" size:15.5];
         _inputTextField.accessibilityLabel = NSLocalizedString(@"To", nil);
-        _inputTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+        _inputTextField.autocorrectionType = self.textAutocorrectionType;
         _inputTextField.tintColor = self.colorScheme;
         _inputTextField.delegate = self;
         _inputTextField.placeholder = self.placeholderText;
