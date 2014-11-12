@@ -68,7 +68,34 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
 {
     [super layoutSubviews];
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.frame) - self.horizontalInset * 2, CGRectGetHeight(self.frame) - self.verticalInset * 2);
-    [self reloadData];
+    [self relayoutAllSubviews];
+}
+
+- (void)relayoutAllSubviews {
+    BOOL inputFieldShouldBecomeFirstResponder = self.inputTextField.isFirstResponder;
+    [self.collapsedLabel removeFromSuperview];
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    self.scrollView.hidden = NO;
+    [self removeGestureRecognizer:self.tapGestureRecognizer];
+    self.tokens = [NSMutableArray array];
+    
+    CGFloat currentX = 0;
+    CGFloat currentY = 0;
+    
+    [self layoutToLabelInView:self.scrollView origin:CGPointZero currentX:&currentX];
+    [self layoutTokensWithCurrentX:&currentX currentY:&currentY];
+    [self layoutInputTextFieldWithCurrentX:&currentX currentY:&currentY];
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.contentSize.width, currentY + [self heightForToken])];
+    
+    [self updateInputTextField];
+    
+    if (inputFieldShouldBecomeFirstResponder) {
+        [self inputTextFieldBecomeFirstResponder];
+    } else {
+        [self focusInputTextField];
+    }
+    
+    [self invalidateIntrinsicContentSize];
 }
 
 - (BOOL)becomeFirstResponder
@@ -98,20 +125,23 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
         VENToken *token = [[VENToken alloc] init];
         [token setTitleText:[NSString stringWithFormat:@"%@,", title]];
         
-        if (currentX + token.width <= self.scrollView.contentSize.width)
-        {
-            // token fits in current line
-        }
-        else
-        {
+        CGFloat tokenWidth = token.width;
+        if (tokenWidth > self.scrollView.contentSize.width) { // Token is wider than max width
+            // Take all of the remaining space
+            token.frame = CGRectMake(currentX, currentY, self.scrollView.contentSize.width - currentX, token.height);
             currentY += token.height;
             currentX = 0;
-            CGFloat tokenWidth = token.width;
-            if (tokenWidth > self.scrollView.contentSize.width) { // token is wider than max width
-                tokenWidth = self.scrollView.contentSize.width;
+        } else {
+            if (currentX + token.width <= self.scrollView.contentSize.width) { // token fits in current line
+                token.frame = CGRectMake(currentX, currentY, token.width, token.height);
             }
+            else { // Go to next line
+                currentY += token.height;
+                currentX = 0;
+                token.frame = CGRectMake(currentX, currentY, token.width, token.height);
+            }
+            currentX += token.width + self.tokenPadding;
         }
-        currentX += token.width + self.tokenPadding;
     }
     
     CGFloat inputTextFieldWidth = self.scrollView.contentSize.width - currentX;
