@@ -46,7 +46,6 @@
 
 - (void)reloadData;
 - (void)collapse;
-- (NSString *)inputText;
 
 
 /**-----------------------------------------------------------------------------
@@ -68,6 +67,7 @@
 
 @property (strong, nonatomic) UILabel *toLabel;
 
+@property (strong, nonatomic) NSString *inputText;
 @property (copy, nonatomic) NSString *placeholderText;
 
 - (void)setColorScheme:(UIColor *)color;
